@@ -1,0 +1,91 @@
+.button__arrow {
+  border: none;
+  border-bottom: 2px solid $color-1;
+  padding-bottom: 1rem;
+  color: $color-text;
+  font-size: 1.6rem;
+  background-color: none;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+
+    & > * {
+      margin-left: 2rem;
+      color: $color-1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.span__arrow {
+  margin-left: 0.5rem;
+  transition: all 0.5s;
+}
+
+.button__medium {
+  border: none;
+  background-color: $color-1;
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: $color-4;
+  border: 1px solid $color-1;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-1;
+    border: 1px solid $color-1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @media only screen and (max-width: $bp-tiny) {
+    // 400px
+    font-size: 1.5rem;
+  }
+}
+
+.h2 {
+  padding: $space-medium;
+
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.main__h1 {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  padding: 2rem 0;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &:hover {
+    background-image: linear-gradient(to right, $color-1, $color-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: skewX(-20deg);
+  }
+
+  @media only screen and (max-width: $bp-tiny) {
+    // 400px
+    font-size: 2rem;
+  }
+}
+
+.main__h2 {
+  font-weight: 300;
+
+  @media only screen and (max-width: $bp-tiny) {
+    // 400px
+    font-size: 1.75rem;
+  }
+}

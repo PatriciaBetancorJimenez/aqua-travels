@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/tint-solid.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aqua travels</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="img/logo.jpg" alt="" class="logo__img" />
+          <h2 class="logo__text">Aqua travels</h2>
+        </div>
+
+        <form class="form" action="" method="">
+          <input
+            type="text"
+            class="form__input"
+            placeholder="Search"
+            name="search"
+            required
+          />
+          <button class="form__button" type="submit" name="search_submit">
+            <i class="fas fa-search form__icon"></i>
+          </button>
+        </form>
+
+        <div class="icons">
+          <div class="icons__box">
+            <i class="fas fa-comment icons__icon"></i>
+            <span>2</span>
+          </div>
+          <div class="icons__box">
+            <i class="fas fa-envelope icons__icon"></i>
+            <span>7</span>
+          </div>
+          <div class="icons__box icons__box--user">
+            <img src="img/user-1.jpeg" alt="user-1" class="icons__img" />
+            <p class="icons__user-name">Isabel</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <nav class="nav">
+          <ul class="list">
+            <li class="list__item">
+              <a href="index.html" class="list__link"
+                ><i class="fas fa-tint list__icon"></i>Home</a
+              >
+            </li>
+            <li class="list__item list__item--active">
+              <a href="transport.html" class="list__link"
+                ><i class="fas fa-bus list__icon"></i>Transport</a
+              >
+            </li>
+            <li class="list__item">
+              <a href="rooms.html" class="list__link"
+                ><i class="fas fa-home list__icon"></i>Rooms</a
+              >
+            </li>
+            <li class="list__item">
+              <a href="sports.html" class="list__link"
+                ><i class="fas fa-swimming-pool list__icon"></i>sports</a
+              >
+            </li>
+          </ul>
+          <footer class="list__footer">
+            <div class="list__footer-media">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="list__footer-link"
+                ><i class="fab fa-instagram list__footer-icon"></i
+              ></a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="list__footer-link"
+                ><i class="fab fa-facebook-f list__footer-icon"></i
+              ></a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="list__footer-link"
+                ><i class="fab fa-twitter list__footer-icon"></i
+              ></a>
+              <a
+                href="https://es.linkedin.com"
+                target="_blank"
+                class="list__footer-link"
+                ><i class="fab fa-linkedin-in list__footer-icon"></i
+              ></a>
+            </div>
+            <p class="list__footer-copy">
+              &copy; Patricia Betancor Jiménez 2020 &hearts;
+            </p>
+          </footer>
+        </nav>
+
+        <main class="main">
+          <div class="compass">
+            <div class="pickup">
+              <div class="pickup__bg">
+                <h2 class="main__h1">We offer a pick up service</h2>
+                <div class="pickup__wrap">
+                  <form action="" method="" class="pickup__form">
+                    <div class="pickup__form-left">
+                      <label for="from" class="pickup__label">From:</label>
+                      <select
+                        name="pickup"
+                        id="from"
+                        class="pickup__select"
+                        required
+                      >
+                        <option value="hotel">Hotel to Airport</option>
+                        <option value="airport" selected>
+                          Airport to Hotel
+                        </option>
+                      </select>
+                      <label class="pickup__label" for="time"
+                        >Pick up time:</label
+                      >
+                      <input
+                        type="datetime-local"
+                        id="time"
+                        class="pickup__time"
+                        name="time"
+                        value=""
+                        min="2010-01-01T00:00"
+                        max="2025-01-01T00:00"
+                        required
+                      />
+                    </div>
+
+                    <div class="pickup__form-center">
+                      <label for="adults" class="pickup__label">Adults:</label>
+                      <select
+                        name="adults"
+                        id="adults"
+                        class="pickup__select"
+                        required
+                      >
+                        <option value="a1">1</option>
+                        <option value="a2" selected>2</option>
+                        <option value="a3">3</option>
+                        <option value="a4">4</option>
+                        <option value="a5">5</option>
+                        <option value="a6">6</option>
+                        <option value="a7">7</option>
+                      </select>
+
+                      <label for="children" class="pickup__label"
+                        >Children:</label
+                      >
+                      <select
+                        name="children"
+                        id="children"
+                        class="pickup__select"
+                        required
+                      >
+                        <option value="c1" selected>0</option>
+                        <option value="c2">1</option>
+                        <option value="c3">2</option>
+                        <option value="c4">3</option>
+                        <option value="c5">4</option>
+                        <option value="c6">5</option>
+                        <option value="c7">6</option>
+                        <option value="c8">7</option>
+                      </select>
+                    </div>
+
+                    <div class="pickup__form-right">
+                      <button
+                        type="submit"
+                        name="pickup_submit"
+                        class="button__medium pickup__submit"
+                      >
+                        Book now
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transport">
+            <section class="feedback">
+              <h2 class="h2">Pick up service</h2>
+              <div class="feedback__wrap">
+                <div class="feedback__box">
+                  <i class="fas fa-car feedback__icon"></i>
+                  <h3 class="feedback__name">Modern car</h3>
+                  <p class="feedback__text">
+                    We offer pick up services with our modern car fleet. New
+                    features and controls have been added to vehicles. These
+                    include air conditioning, navigation systems, and in-car
+                    entertainment.
+                  </p>
+                </div>
+                <div class="feedback__box">
+                  <i class="fas fa-moon feedback__icon"></i>
+                  <h3 class="feedback__name">24 / 7</h3>
+                  <p class="feedback__text">
+                    Our staff are generally working at each location between 9
+                    AM – 6 PM local time Monday through Friday at all locations.
+                    However, if need our services at any time, our reception is
+                    24/7 available for you.
+                  </p>
+                </div>
+                <div class="feedback__box">
+                  <i class="fas fa-wifi feedback__icon"></i>
+                  <h3 class="feedback__name">Wifi access</h3>
+
+                  <p class="feedback__text">
+                    Be amazed by the fast connection of our Free WiFi inside all
+                    of our cars! Save your gigabytes, stay connected anywhere
+                    and improve your mobile and travel experience. (Maximum 4
+                    divices by car).
+                  </p>
+                </div>
+              </div>
+              <div class="feedback__link-box">
+                <a href="rooms.html" class="button__arrow">
+                  See more <i class="fas fa-arrow-right span__arrow"></i>
+                </a>
+              </div>
+            </section>
+
+            <section class="eco">
+              <h2 class="h2 eco__title">Eco transport</h2>
+              <p class="eco__paragraph">
+                Eco transport services are the simple, fast and hassle free
+                transport service, weather you need to get to the airporto, to
+                the beach or to the closeset local pub, we offer a wide range of
+                eco services.
+              </p>
+              <div class="eco__figures">
+                <figure class="eco__figure eco__figure--1">
+                  <img src="img/tram.jpg" alt="" class="eco__img" />
+                </figure>
+                <figure class="eco__figure eco__figure--2">
+                  <img src="img/bike.jpg" alt="" class="eco__img" />
+                </figure>
+                <figure class="eco__figure eco__figure--3">
+                  <img src="img/bus.jpg" alt="" class="eco__img" />
+                </figure>
+              </div>
+              <p class="eco__paragraph">
+                In Corfu town, you are able to select a transport of your
+                choice. We strongly recommend the bike for sightseeing, the tram
+                to move inside the town and the bus to explore the island.
+              </p>
+
+              <div class="eco__wrap">
+                <div class="eco__box">
+                  <a class="eco__box-items" href="#">
+                    <div class="eco__box-wrap">
+                      <i class="fas fa-bicycle eco__box-icon"></i>
+                      <p class="eco__box-paragraph">Bike</p>
+                    </div>
+                    <i class="fas fa-angle-double-right eco__box-icon"></i>
+                  </a>
+                  <a class="eco__box-items" href="#">
+                    <div class="eco__box-wrap">
+                      <i class="fas fa-bus eco__box-icon"></i>
+                      <p class="eco__box-paragraph">Bus</p>
+                    </div>
+                    <i class="fas fa-angle-double-right eco__box-icon"></i>
+                  </a>
+                  <a class="eco__box-items" href="#">
+                    <div class="eco__box-wrap">
+                      <i class="fas fa-tram eco__box-icon"></i>
+                      <p class="eco__box-paragraph">Tram</p>
+                    </div>
+                    <i class="fas fa-angle-double-right eco__box-icon"></i>
+                  </a>
+                </div>
+
+                <div class="eco__rent">
+                  <h3 class="eco__rent-h3">Rent</h3>
+                  <p class="eco__rent-p">
+                    Do you want to book now or just have any question about the
+                    services? Just press more info below:
+                  </p>
+
+                  <button class="button__medium">More info</button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="map">
+            <h2 class="h2 map__title">Find us</h2>
+            <p class="map__address">
+              Agios Ioannis Peristeron 16, 49084, Corfu, Greece
+            </p>
+            <div class="map__wrap">
+              <iframe
+                class="map__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24589.739178507763!2d19.891989302332572!3d39.611048147689644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135b5c00bfd150d7%3A0x400bd2ce2b99410!2zQ29yZsO6LCBHcmVjaWE!5e0!3m2!1ses!2suk!4v1606403352044!5m2!1ses!2suk"
+                width="600"
+                height="450"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/161339b2f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

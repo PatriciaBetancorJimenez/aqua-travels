@@ -1,0 +1,124 @@
+//**************************COMMON LAYOUT***************************//
+
+.container {
+  background-color: $color-white;
+  max-width: 120rem;
+  margin: 8rem auto;
+  min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    // 1200px
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    // 900px
+
+    flex-direction: column;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid $color-1;
+
+  @media only screen and (max-width: $bp-small) {
+    // 700px
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.nav {
+  display: flex;
+  flex: 0 0 20%;
+  background-color: $color-4;
+  color: $color-white;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1;
+}
+
+//**************************HOME***************************//
+
+.gallery {
+  display: flex;
+
+  border-bottom: 1px solid $color-1;
+}
+
+.text {
+  display: flex;
+  padding: $space-medium;
+  background-color: $color-3;
+
+  @media only screen and (max-width: $bp-largest) {
+    // 1200px
+
+    padding: $space-medium 1.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    // 700px
+
+    flex-direction: column;
+    padding: $space-medium;
+  }
+
+  @media only screen and (max-width: $bp-tiny) {
+    // 400px
+
+    padding: 0;
+  }
+}
+
+//**************************ACCOMMODATION***************************//
+
+.accommodation,
+.compass,
+.film {
+  height: 50rem;
+  border-bottom: 1px solid $color-1;
+  position: relative;
+}
+
+.sports {
+  background-color: $color-3;
+  padding: 6rem;
+
+  @media only screen and (max-width: $bp-small) {
+    // 700px
+    padding: 6rem 1rem;
+  }
+}
+
+//**************************TRANSPORT***************************//
+
+.rooms,
+.transport {
+  & > * {
+    padding: 6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      // 1100px
+      padding: 6rem 3rem;
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+      // 400px
+      padding: 6rem 1rem;
+    }
+  }
+}
