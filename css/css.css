@@ -1238,7 +1238,11 @@ body {
     margin: 3rem 0; }
     .enquiries__list > li {
       font-weight: 700; }
-  .enquiries__list-item, .enquiries__list-answer {
-    margin: 1.5rem; }
+  .enquiries__list-item {
+    margin: 1.5rem;
+    cursor: pointer; }
+  .enquiries__list-answer {
+    margin: 1.5rem;
+    display: none; }
   .enquiries__button {
     background-color: white; }

@@ -1570,9 +1570,13 @@
     }
   }
 
-  &__list-item,
+  &__list-item {
+    margin: 1.5rem;
+    cursor: pointer;
+  }
   &__list-answer {
     margin: 1.5rem;
+    display: none;
   }
 
   &__button {
