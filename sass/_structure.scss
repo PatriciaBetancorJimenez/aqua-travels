@@ -145,7 +145,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &--active {
       background-color: $color-white;
     }
   }
@@ -712,7 +713,7 @@
   }
 }
 
-/***********************************ACCOMMODATION***********************************/
+/***********************************ROOMS***********************************/
 
 .picture {
   background-image: url("../img/views.jpg");
@@ -1307,7 +1308,7 @@
   }
 }
 
-/***********************************TOURS***********************************/
+/***********************************SPORTS***********************************/
 
 .video {
   &__content {
@@ -1581,5 +1582,211 @@
 
   &__button {
     background-color: white;
+  }
+}
+
+//*********************************************USER PROFILE***************************************
+.user {
+  display: flex;
+  margin: $space-medium;
+  padding: $space-medium;
+  background-color: $color-3;
+  box-shadow: $box-shadow;
+  border-radius: 20px;
+  @media only screen and (max-width: $bp-smallest) {
+    // 500px
+    flex-direction: column;
+  }
+  &__profile {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    border: 3px solid $color-text;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__info {
+    padding: $space-medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__description {
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    list-style: none;
+    margin: 2rem 0;
+  }
+}
+
+//*********************************************EMAIL***************************************
+.email {
+  background-color: $color-3;
+  padding-top: $space-medium;
+  height: 100%;
+
+  &__title {
+    text-align: center;
+    margin: $space-medium;
+  }
+
+  &__item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+
+    &--close {
+      background-color: $color-text;
+      color: $color-white;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+  }
+
+  &__date {
+    @media only screen and (max-width: $bp-tiny) {
+      // 1100px
+      display: none;
+    }
+  }
+}
+
+//*********************************************CHAT**************************************
+.chat {
+  display: flex;
+  background-color: $color-3;
+  @media only screen and (max-width: $bp-small) {
+    // 700px
+    flex-direction: column;
+  }
+
+  &__left {
+    flex: 0 0 20%;
+    border-right: 1px solid $color-text;
+
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      border-right: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    padding: $space-medium 0;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    list-style: none;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem $space-medium;
+
+    &:hover {
+      background-color: $color-white;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.5rem;
+    font-size: 1rem;
+
+    &--active {
+      color: greenyellow;
+      font-size: 1.25rem;
+    }
+
+    &--disabled {
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    width: 80%;
+    height: 40rem;
+
+    background-color: $color-white;
+    margin: $space-medium;
+    padding: $space-medium;
+    border-radius: 20px;
+    overflow: auto;
+    word-wrap: break-word;
+  }
+
+  &__paragraph {
+    margin: 1rem 0;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__write {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-4;
+    padding: $space-medium;
+
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      flex-direction: column;
+    }
+  }
+
+  &__textarea {
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    padding: 2rem;
+    border-radius: 20px;
+    color: $color-text;
+    width: 60%;
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+    font-family: sans-serif;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      margin-top: $space-medium;
+    }
   }
 }

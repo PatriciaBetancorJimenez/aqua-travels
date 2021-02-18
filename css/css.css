@@ -23,6 +23,10 @@ body {
   body ::selection {
     background-color: #0ed2f7; }
 
+.link:hover, .link:link, .link:visited, .link:active {
+  color: #777;
+  text-decoration: none; }
+
 .button__arrow {
   border: none;
   border-bottom: 2px solid #0ed2f7;
@@ -272,7 +276,7 @@ body {
       @media only screen and (max-width: 25em) {
         .icons__box span {
           top: 2rem; } }
-    .icons__box:hover {
+    .icons__box:hover, .icons__box--active {
       background-color: #fff; }
   .icons__icon {
     font-size: 2.75rem; }
@@ -627,7 +631,7 @@ body {
     outline: none;
     animation: pulsate 1s infinite; }
 
-/***********************************ACCOMMODATION***********************************/
+/***********************************ROOMS***********************************/
 .picture {
   background-image: url("../img/views.jpg");
   background-repeat: no-repeat;
@@ -1057,7 +1061,7 @@ body {
     width: 100%;
     display: block; }
 
-/***********************************TOURS***********************************/
+/***********************************SPORTS***********************************/
 .video__content {
   height: 100%;
   width: 100%;
@@ -1246,3 +1250,143 @@ body {
     display: none; }
   .enquiries__button {
     background-color: white; }
+
+.user {
+  display: flex;
+  margin: 3rem;
+  padding: 3rem;
+  background-color: #f4f2f2;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+  border-radius: 20px; }
+  @media only screen and (max-width: 31.25em) {
+    .user {
+      flex-direction: column; } }
+  .user__profile {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .user__img {
+    display: block;
+    margin: auto;
+    width: 70%;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    border: 3px solid #777; }
+    .user__img:hover {
+      opacity: 0.9; }
+  .user__info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .user__description {
+    margin-bottom: 2rem; }
+  .user__item {
+    list-style: none;
+    margin: 2rem 0; }
+
+.email {
+  background-color: #f4f2f2;
+  padding-top: 3rem;
+  height: 100%; }
+  .email__title {
+    text-align: center;
+    margin: 3rem; }
+  .email__item {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem; }
+    .email__item--close {
+      background-color: #777;
+      color: #fff; }
+  .email__icon {
+    margin-right: 1.5rem; }
+  @media only screen and (max-width: 25em) {
+    .email__date {
+      display: none; } }
+
+.chat {
+  display: flex;
+  background-color: #f4f2f2; }
+  @media only screen and (max-width: 43.75em) {
+    .chat {
+      flex-direction: column; } }
+  .chat__left {
+    flex: 0 0 20%;
+    border-right: 1px solid #777; }
+    @media only screen and (max-width: 43.75em) {
+      .chat__left {
+        border-right: none; } }
+  .chat__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .chat__list {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 43.75em) {
+      .chat__list {
+        flex-direction: row;
+        flex-wrap: wrap; } }
+  .chat__item {
+    display: flex;
+    list-style: none;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem 3rem; }
+    .chat__item:hover {
+      background-color: #fff; }
+  .chat__icon {
+    margin-right: 1.5rem;
+    font-size: 1rem; }
+    .chat__icon--active {
+      color: greenyellow;
+      font-size: 1.25rem; }
+    .chat__icon--disabled {
+      opacity: 0; }
+  .chat__content {
+    width: 80%;
+    height: 40rem;
+    background-color: #fff;
+    margin: 3rem;
+    padding: 3rem;
+    border-radius: 20px;
+    overflow: auto;
+    word-wrap: break-word; }
+  .chat__paragraph {
+    margin: 1rem 0; }
+  .chat__link {
+    text-decoration: none; }
+  .chat__write {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 3rem; }
+    @media only screen and (max-width: 43.75em) {
+      .chat__write {
+        flex-direction: column; } }
+  .chat__textarea {
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    padding: 2rem;
+    border-radius: 20px;
+    color: #777;
+    width: 60%; }
+  .chat__button {
+    padding: 1rem 2rem;
+    font-family: sans-serif;
+    border-radius: 20px;
+    outline: none;
+    border: none; }
+    @media only screen and (max-width: 43.75em) {
+      .chat__button {
+        margin-top: 3rem; } }

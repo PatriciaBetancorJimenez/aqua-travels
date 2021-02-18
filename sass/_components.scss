@@ -1,3 +1,13 @@
+.link {
+  &:hover,
+  &:link,
+  &:visited,
+  &:active {
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
 .button__arrow {
   border: none;
   border-bottom: 2px solid $color-1;
