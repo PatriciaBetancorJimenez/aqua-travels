@@ -45,6 +45,15 @@
   color: $color-white;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: $bp-medium) {
+    // 900px
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 25;
+  }
 }
 
 .main {
