@@ -85,13 +85,18 @@
   &__button {
     border: none;
     background-color: none;
-    //   color: inherit;
+
     margin-left: -4rem;
     font-size: 2rem;
     cursor: pointer;
 
     &:focus {
       outline: 0;
+    }
+  }
+  &__icon {
+    &::before {
+      background: transparent;
     }
   }
 }
@@ -1593,6 +1598,126 @@
   }
 }
 
+//*********************************************CHECKOUT***************************************
+
+.checkout {
+  &__content {
+    padding: $space-medium;
+    background-color: $color-3;
+    margin: $space-medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: $box-shadow;
+    border-radius: 25px;
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      flex-direction: column;
+    }
+  }
+
+  &__form-left,
+  &__form-right {
+    min-height: 50rem;
+
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: $bp-small) {
+      // 700px
+      width: 80%;
+    }
+  }
+
+  &__form-item {
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    padding: 1rem 2rem;
+
+    &--ccv {
+      width: 9rem;
+    }
+  }
+
+  &__payments {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__payments-left,
+  &__payments-right {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__payment {
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__paypal,
+  &__card {
+    display: none;
+  }
+
+  &__card-number,
+  &__paypal-email {
+    width: 100%;
+  }
+
+  &__card-expiry {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      margin-top: 3rem;
+      width: 31%;
+    }
+  }
+
+  &__active {
+    display: block;
+  }
+
+  &__form-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 80%;
+  }
+}
+
+select:invalid {
+  color: grey;
+}
+
 //*********************************************USER PROFILE***************************************
 .user {
   display: flex;
@@ -1712,14 +1837,16 @@
   }
 
   &__list {
-    padding: $space-medium 0;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
     @media only screen and (max-width: $bp-small) {
       // 700px
       flex-direction: row;
       flex-wrap: wrap;
+      padding-bottom: $space-medium;
+      min-height: auto;
     }
   }
 
@@ -1797,7 +1924,7 @@
     padding: 2rem;
     border-radius: 20px;
     color: $color-text;
-    width: 60%;
+    width: 80%;
   }
 
   &__button {

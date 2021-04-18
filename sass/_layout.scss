@@ -4,8 +4,8 @@
   background-color: $color-white;
   max-width: 120rem;
   margin: 8rem auto;
-  min-height: 50rem;
-
+  // min-height: 50rem;
+  min-height: 100vh;
   @media only screen and (max-width: $bp-largest) {
     // 1200px
     margin: 0;
@@ -45,10 +45,11 @@
   color: $color-white;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 
   @media only screen and (max-width: $bp-medium) {
     // 900px
-
+    min-height: auto;
     position: sticky;
     top: 0;
     width: 100%;

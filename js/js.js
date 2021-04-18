@@ -51,7 +51,7 @@ $(".chat__item")
     );
   });
 
-//back to general button
+//"back to general" button
 $(".chat__button-general").click(function () {
   $(".chat__invisible").css("display", "none");
   $(".chat__content").find("p").remove();
@@ -61,4 +61,43 @@ $(".chat__button-general").click(function () {
 // FAQ slide effect
 $(".enquiries__list-item").click(function () {
   $(this).next().slideToggle(800);
+});
+
+// / *********CHECKOUT**************
+
+//card / paypal animation
+
+$("#button__paypal").click(function () {
+  $(".checkout__paypal").fadeIn("slow").addClass("checkout__active");
+  $(".checkout__card").fadeOut("slow").removeClass("checkout__active");
+});
+
+$("#button__card").click(function () {
+  $(".checkout__card").fadeIn("slow").addClass("checkout__active");
+  $(".checkout__paypal").fadeOut("slow").removeClass("checkout__active");
+});
+
+//total price animation
+let roomType;
+let peopleNumber;
+
+$(".room-type").change(function () {
+  roomType = $(".room-type").val();
+  console.log(roomType);
+});
+
+$(".people-number").change(function () {
+  if (
+    $(".people-number").val() != "" &&
+    $(".people-number").val() <= 4 &&
+    $(".people-number").val() >= 1
+  ) {
+    peopleNumber = $(".people-number").val();
+
+    console.log(peopleNumber);
+
+    $(".total-price").html(`Total price: £ ${peopleNumber * roomType}`);
+  } else {
+    $(".total-price").html("");
+  }
 });
