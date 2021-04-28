@@ -233,7 +233,8 @@
 
   &__item::before {
     content: "";
-    width: 1rem;
+    width: 0rem;
+
     height: 100%;
     background-image: $background-gradient;
     position: absolute;
@@ -722,7 +723,6 @@
 
   &:focus {
     outline: none;
-    animation: pulsate 1s infinite;
   }
 }
 
@@ -1839,7 +1839,7 @@ select:invalid {
   &__list {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    // min-height: 50vh;
 
     @media only screen and (max-width: $bp-small) {
       // 700px
@@ -1881,7 +1881,7 @@ select:invalid {
 
   &__content {
     width: 80%;
-    height: 40rem;
+    height: 67vh;
     position: relative;
     background-color: $color-white;
     margin: $space-medium;

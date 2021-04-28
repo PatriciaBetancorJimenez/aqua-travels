@@ -339,7 +339,7 @@ body {
         font-size: 1rem; } }
   .list__item::before {
     content: "";
-    width: 1rem;
+    width: 0rem;
     height: 100%;
     background-image: linear-gradient(to bottom right, #333, #0ed2f7);
     position: absolute;
@@ -646,8 +646,7 @@ body {
   .btn:hover .btn__invisible {
     top: 0; }
   .btn:focus {
-    outline: none;
-    animation: pulsate 1s infinite; }
+    outline: none; }
 
 /***********************************ROOMS***********************************/
 .picture {
@@ -1437,8 +1436,7 @@ select:invalid {
     width: 100%; }
   .chat__list {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; }
+    flex-direction: column; }
     @media only screen and (max-width: 43.75em) {
       .chat__list {
         flex-direction: row;
@@ -1466,7 +1464,7 @@ select:invalid {
       opacity: 0; }
   .chat__content {
     width: 80%;
-    height: 40rem;
+    height: 67vh;
     position: relative;
     background-color: #fff;
     margin: 3rem;
